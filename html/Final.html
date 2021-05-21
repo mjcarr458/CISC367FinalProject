@@ -15370,55 +15370,6 @@ dtype: int64</pre>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[25]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-     <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">info</span><span class="p">()</span>
-</pre></div>
-
-     </div>
-</div>
-</div>
-</div>
-
-<div class="jp-Cell-outputWrapper">
-
-
-<div class="jp-OutputArea jp-Cell-outputArea">
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>&lt;class &#39;pandas.core.frame.DataFrame&#39;&gt;
-RangeIndex: 1040394 entries, 0 to 1040393
-Data columns (total 8 columns):
- #   Column           Non-Null Count    Dtype         
----  ------           --------------    -----         
- 0   FISCAL_YEAR      1040394 non-null  int64         
- 1   FISCAL_PERIOD    1040394 non-null  int64         
- 2   DEPT_NAME        1040394 non-null  object        
- 3   DIV_NAME         1040394 non-null  object        
- 4   MERCHANT         1040394 non-null  object        
- 5   CAT_DESCR        1040394 non-null  object        
- 6   TRANS_DT         1040394 non-null  datetime64[ns]
- 7   MERCHANDISE_AMT  1040394 non-null  float64       
-dtypes: datetime64[ns](1), float64(1), int64(2), object(4)
-memory usage: 63.5+ MB
-</pre>
-</div>
-</div>
-
-</div>
-
-</div>
-
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-InputArea jp-Cell-inputArea">
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[28]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
@@ -16020,7 +15971,7 @@ Department of Transport: 139862
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>All the above analysis was created with the intent to paint a clear picture of how P-Card money allocation is being spent for the tax payers supporting the P-Card program. Throughout the analysis I investigated several core questions that are as follows. <strong>How much money did the P-Card Program spend?</strong> <strong>When was the most P-Card money being spent</strong> <strong>Who is spending P-Card money?</strong> <strong>What is P-Card money being spent on?</strong> In my investigation I found significant impacts of COVID-19 on how much P-Card were being used as well as what the money was being spent on. COVID-19 however did not impact who was spending the most money. I also discovered that the purchase price distribtions of different agencies and the overall total are very similar to each other, with the majority falling under the \$250 range.</p>
+<p>All the above analysis was created with the intent to paint a clear picture of how P-Card money allocation is being spent for the tax payers supporting the P-Card program. The first area of analysis focused on both the yearly and seasonal fluctuations in P-Card spending. In this section I found that the monthly spending on P-Cards remains fairly constant across all 12 months. More interestingly however my analysis captured a stark drop in P-Card spending from 2019 to 2020. After further investigation into this matter I found drop happened specifically in March/April of 2020 giving me reason to suspect the drop in P-Card purchasing was caused by the onset of the COVID-19 Pandemic. This is an hypothesis that was further supported by the next sector of analysis where I broke down what categories P-Card spending was mostly used. In the dataset as a whole, categories such as lodging, restaurants, and fast food were some of the most popular areas of spending, but in the 2020 dataset these categories were not as popular. I believe the restrictions put on traveling and the closing of restaurants because of COVID-19 explain the sudden lack of these spending categories in the dataset. As for the categories of spending as a whole, I found that the categories followed a lognormal regression meaning that while there were some categories that a lot of purchases were made in the majority of purchase categories fell under 10,000 instances over the 6 year period. Finally the last are of analysis focused on determining which Departments were making the most P-Card purchases. Within this area I found the two largest outliers by total purchases to be the Department of Corrections as well as the Department of Transportation. After looking at the data by total sum, I sorted the data by mean purchase price where a 3rd outlier in the Department of Technology had a mean purchase price of more than double the next highest department. I felt that this justified a closer inspection into the Department of Technology's purchases as well as the first two suspected outliers. My analysis lead me to calculate the outliers of all these departments where I discovered the Department of Technology had the largest proportion of outliers as well as the least instances of purchases out of the group, explaining why the department's mean purchase prices was so large. After plotting the histograms off all these groups they all followed the same distribution with the majority of purchases falling under the the 250 dollar range. The last area of the by department analysis aimed to see if what departments were spending the most money was also affected by COVID-19. After plotting the percentages of top spenders I found that there was no significant change in top spenders from 2020 when compared against the rest of the dataset.</p>
 
 </div>
 </div>
@@ -16031,9 +15982,25 @@ Department of Transport: 139862
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p><a href="https://www.delawarepublic.org/post/ud-odds-auditors-office-over-procurement-card-audit">University of Delaware P-Card Audit</a></p>
+<p><a href="https://www.delawarepublic.org/post/ud-odds-auditors-office-over-procurement-card-audit">University of Delaware P-Card Audit</a><br>
+<a href="https://budget.delaware.gov/accounting-manual/documents/chapter12.pdf?ver=0917">Delaware P-Card Spending Manual</a><br>
+<a href="https://www.napcp.org/page/PCardProcess">NAPCP P-Card Summary</a></p>
 
 </div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span> 
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
 </div>
 </body>
 
